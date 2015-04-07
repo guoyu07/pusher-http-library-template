@@ -16,7 +16,7 @@ It's important to note that language/runtime conventions should be followed an o
 
 *Brief overview of what the library offers providing more detail than simply interacting with the HTTP API*
 
-In order to use this library, you need to have an account on <http://pusher.com>. After registering, you will need the application credentials for your app.
+In order to use this library, you need to have an account on <https://pusher.com>. After registering, you will need the application credentials for your app.
 
 ## Feature Support
 
