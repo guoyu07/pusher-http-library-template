@@ -26,6 +26,7 @@ Feature                                    | Supported
 -------------------------------------------| :-------:
 Trigger event on single channel            | *&#10004; or &#10008;*
 Trigger event on multiple channels         | *&#10004; or &#10008;*
+Trigger events in batches                  | *&#10004; or &#10008;*
 Excluding recipients from events           | *&#10004; or &#10008;*
 Authenticating private channels            | *&#10004; or &#10008;*
 Authenticating presence channels           | *&#10004; or &#10008;*
@@ -102,6 +103,19 @@ pusher.trigger('channel-1', 'test_event', { message: "hello world" });
 
 ```js
 pusher.trigger([ 'channel-1', 'channel-2' ], 'test_event', { message: "hello world" });
+```
+
+#### Batches
+
+Limited to 10 events per call on our multi-tenant clusters.
+
+**{Example}:**
+
+```js
+pusher.triggerBatch([
+  { channel: 'channel-1', name: 'test_event', message: "hello world" },
+  { channel: 'channel-1', name: 'test_event', message: "my name is bob" },
+]);
 ```
 
 ### Excluding event recipients
